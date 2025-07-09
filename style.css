@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bg: linear-gradient(135deg, #c3ecf7, #f5d6e0);
+  --card-bg: rgba(255, 255, 255, 0.25);
+  --card-blur: blur(10px);
+  --border: rgba(255, 255, 255, 0.3);
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  border-radius: 20px;
+  background: var(--card-bg);
+  backdrop-filter: var(--card-blur);
+  box-shadow: 0 8px 32px var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.todo-app h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.input-container button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.input-container button:hover {
+  background-color: #3a9442;
+}
+
+.task-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.task-list li {
+  background: white;
+  margin-bottom: 0.8rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.task-list li span {
+  flex: 1;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task-list li button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.task-list li button:hover {
+  transform: scale(1.1);
+}
